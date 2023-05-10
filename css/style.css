@@ -1,0 +1,24 @@
+html{
+	box-sizing: border-box;
+}
+
+*,*::before,*::after{
+	box-sizing: inherit;
+}
+
+.container{
+	max-width: 1160;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.personal-accoutn{background-color: #F9F9FA;}
+
+.personal-account_title{
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 30px;
+	color: #2A3D48;
+}
