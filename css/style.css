@@ -27,8 +27,6 @@ p{
 	margin: 0 auto;
 }
 
-.personal-account{}
-
 .personal-account_title{
 	font-style: normal;
 	font-weight: 700;
@@ -190,7 +188,6 @@ p{
 }
 
 .personal-account_profile_form-input--decor{
-
 	background-position: right;
 	background-image: url('../img/Done.svg');
 	background-repeat: no-repeat;
@@ -234,9 +231,7 @@ p{
 	top: 15px;
 }
 
-.personal-account_profile_form-gender{
-	margin-bottom: 30px;
-}
+.personal-account_profile_form-gender{margin-bottom: 30px;}
 
 .personal-account_profile_form-gender_btn {
 	display: inline-block;
@@ -253,12 +248,24 @@ p{
 	line-height: 20px;
 	border: 1px solid #999;
 	border-radius: 6px;
-	padding: 15px 35px;
+	padding: 15px 20px;
+	width: 134px;
+	text-align: center;
+}
+
+.personal-account_profile_form-gender_btn label > img{
+	display: none;
+	vertical-align: middle;
 }
 
 .personal-account_profile_form-gender_btn input[type=radio]:checked + label {
 	border-color: #FF7A00;
 	color: #FF7A00;
+}
+
+.personal-account_profile_form-gender_btn input[type=radio]:checked + label > img {
+	display: inline-block;
+	margin-left: 10px;
 }
 
 .personal-account_profile_form-btn{
