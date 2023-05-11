@@ -11,6 +11,7 @@ html{
 body{
 	margin: 0;
 	padding: 0;
+	background-color: #F9F9FA;
 }
 
 a{
@@ -21,13 +22,18 @@ ul{
 	list-style: none;
 	
 }
+p{
+	padding: 0;
+	margin: 0;
+}
+
 .container{
 	max-width: 1160px;
 	padding: 0 10px;
 	margin: 0 auto;
 }
 
-.personal-account{background-color: #F9F9FA;}
+.personal-account{}
 
 .personal-account_title{
 	font-style: normal;
@@ -47,32 +53,49 @@ ul{
 	border-radius: 5px;
 }
 
-.personal-account_sidebar{
-padding: 20px 20px ;
-}
+.personal-account_sidebar{padding: 20px 20px 0 20px;}
 
 .personal-account_sidebar-user-info{
 	background: #F9F9FA;
 	border-radius: 5px;
 	margin-bottom: 15px;
 	padding: 10px 0 10px 11px;
+	width: 320px;
 }
 
 .personal-account_sidebar-user-info-name{
+	display: flex;
 	padding-left:50px;
 	position: relative;
+	flex-direction: column;
 }
+
+.personal-account_sidebar-user-info-name::after{
+	content:'';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 0;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 50%;
+	z-index: 1;
+}
+
 .personal-account_sidebar-user-info-name::before{
 	content:'';
 	position: absolute;
 	background-image: url('../img/smile.svg');
 	width: 25px;
 	height: 25px;
-	left: 0;
+	left: 8px;
+	top: 8px;
 	background-color: #fff;
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-radius: 50%;
+	z-index: 2;
 }
 
 .personal-account_sidebar-nav-item-link{
@@ -84,4 +107,22 @@ padding: 20px 20px ;
 	border-top: 1px solid rgba(42, 61, 72, 0.15);
 	border-radius: 2px;
 	padding: 20px 0;
+	position: relative;
 }
+
+.personal-account_sidebar-nav-item-link:hover{
+	color:#FC6E1D;
+}
+.personal-account_sidebar-nav-item-link:hover::before{
+	content: '';
+	position: absolute;
+	width: 5px;
+	height: 60px;
+	background-color: #FC6E1D;
+	left: -20px;
+	border-radius: 5px;
+	top: 0;
+}
+
+.personal-account_sidebar-nav-item-link.personal-account_sidebar-nav-item-link--exite{color: #FF3347;}
+.personal-account_sidebar-nav-item-link.personal-account_sidebar-nav-item-link--exite:hover::before{background-color: #FF3347;}
