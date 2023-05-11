@@ -63,14 +63,26 @@ p{
 	width: 320px;
 }
 
-.personal-account_sidebar-user-info-name{
+.personal-account_sidebar-user-info-box{
 	display: flex;
 	padding-left:50px;
 	position: relative;
 	flex-direction: column;
 }
 
-.personal-account_sidebar-user-info-name::after{
+.personal-account_sidebar-user-info-box-name{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.personal-account_sidebar-user-info-box-status{
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: rgba(28, 41, 77, 0.5);}
+
+.personal-account_sidebar-user-info-box::after{
 	content:'';
 	position: absolute;
 	width: 40px;
@@ -83,7 +95,7 @@ p{
 	z-index: 1;
 }
 
-.personal-account_sidebar-user-info-name::before{
+.personal-account_sidebar-user-info-box::before{
 	content:'';
 	position: absolute;
 	background-image: url('../img/smile.svg');
