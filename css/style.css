@@ -189,6 +189,15 @@ p{
 	margin-bottom: 15px;
 }
 
+.personal-account_profile_form-input--decor{
+
+	background-position: right;
+	background-image: url('../img/Done.svg');
+	background-repeat: no-repeat;
+	background-position: 94%;
+}
+
+
 .personal-account_profile_form-lable-number{
 	display: flex;
 	justify-content: space-between;
@@ -197,6 +206,7 @@ p{
 	position: relative;
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 15px;
 }
 
 .personal-account_profile_form-lable-date_day, .personal-account_profile_form-lable-date_month, .personal-account_profile_form-lable-date_year{
@@ -224,11 +234,16 @@ p{
 	top: 15px;
 }
 
+.personal-account_profile_form-gender{
+	margin-bottom: 30px;
+}
+
 .personal-account_profile_form-gender_btn {
 	display: inline-block;
 	margin-right: 10px;
 }
-.personal-account_profile_form-gender_btn input[type=radio] {display: none;}
+
+.personal-account_profile_form-gender_btn input[type=radio] {display:none;}
 
 .personal-account_profile_form-gender_btn label {
 	display: inline-block;
@@ -238,7 +253,6 @@ p{
 	line-height: 20px;
 	border: 1px solid #999;
 	border-radius: 6px;
-	user-select: none;
 	padding: 15px 35px;
 }
 
@@ -247,10 +261,15 @@ p{
 	color: #FF7A00;
 }
 
-.personal-account_profile_form-gender_btn label:hover {
-	color: #666;
+.personal-account_profile_form-btn{
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: #FFFFFF;
+	padding: 15px 60px;
+	background: #FF7A00;
+	border-radius: 5px;
+	border:none;
+	cursor: pointer;
 }
-
-
-
 
