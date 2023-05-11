@@ -53,7 +53,10 @@ p{
 	border-radius: 5px;
 }
 
-.personal-account_sidebar{padding: 20px 20px 0 20px;}
+.personal-account_sidebar{
+	padding: 20px 20px 0 20px;
+	height: 461px
+}
 
 .personal-account_sidebar-user-info{
 	background: #F9F9FA;
@@ -148,6 +151,7 @@ p{
 	display: flex;
 	background-color: #F9F9FA;
 	border-radius: 5px;
+	margin-bottom: 30px;
 }
 
 .personal-account_profile_switch-link{
@@ -168,6 +172,36 @@ p{
 	font-size: 14px;
 	line-height: 25px;
 	color: #1C294D;
+}
+
+.personal-account_profile_form{
+	max-width: 420px;
+}
+
+.personal-account_profile_form-text{
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #959EA4;
+}
+.personal-account_profile_form-text span{color: #FF3347}
+
+.personal-account_profile_form-input{
+	width: 100%;
+	padding: 0px 15px;
+	height: 50px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #1C294D;
+	border: 1px solid #DFE2E4;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+
+.personal-account_profile_form-lable-number{
+	display: flex;
+	justify-content: space-between;
 }
 
 
