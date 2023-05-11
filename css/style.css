@@ -203,8 +203,13 @@ p{
 	display: flex;
 	justify-content: space-between;
 }
+.personal-account_profile_form-lable-date{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
 
-.personal-account_profile_form-lable-date_day{
+.personal-account_profile_form-lable-date_day, .personal-account_profile_form-lable-date_month, .personal-account_profile_form-lable-date_year{
 	background-color: #fff;
 	border-radius: 5px;
 	width: 120px;
@@ -214,14 +219,24 @@ p{
 	appearance: none;
 	position: relative;
 }
-.personal-account_profile_form-lable-date_day::before{
-	content:'';
+.personal-account_profile_form-lable-date_month{
+	width: 160px;
+}
+
+.personal-account_profile_form-lable-date_box{
+	position: relative;
+}
+.personal-account_profile_form-lable-date_box::after{
+	content:"";
 	position: absolute;
 	width: 20px;
+	background-repeat: no-repeat;
 	height: 20px;
-	background-image: url(../img/Chevron Down.svg);
-	right: 0;
+	background-image: url(../img/arrow.svg);
+	right: 15px;
+	top: 15px;
 }
+
 
 
 
