@@ -7,9 +7,19 @@ html{
 	box-sizing: inherit;
 	font-family: 'Roboto', sans-serif;
 }
+
 body{
 	margin: 0;
 	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+	
 }
 .container{
 	max-width: 1160px;
@@ -25,6 +35,7 @@ body{
 	font-size: 25px;
 	line-height: 30px;
 	color: #2A3D48;
+	margin-bottom: 30px;
 }
 
 .personal-account_inner{
@@ -37,12 +48,40 @@ body{
 }
 
 .personal-account_sidebar{
-
+padding: 20px 20px ;
 }
 
 .personal-account_sidebar-user-info{
 	background: #F9F9FA;
 	border-radius: 5px;
+	margin-bottom: 15px;
+	padding: 10px 0 10px 11px;
 }
 
-.personal
+.personal-account_sidebar-user-info-name{
+	padding-left:50px;
+	position: relative;
+}
+.personal-account_sidebar-user-info-name::before{
+	content:'';
+	position: absolute;
+	background-image: url('../img/smile.svg');
+	width: 25px;
+	height: 25px;
+	left: 0;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 50%;
+}
+
+.personal-account_sidebar-nav-item-link{
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #1C294D;
+	display: block;
+	border-top: 1px solid rgba(42, 61, 72, 0.15);
+	border-radius: 2px;
+	padding: 20px 0;
+}
