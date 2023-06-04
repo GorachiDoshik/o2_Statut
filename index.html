@@ -40,37 +40,37 @@
 							<a href="#" class="personal-account_profile_switch-link">Адрес доставки</a>
 							<a href="#" class="personal-account_profile_switch-link">Пароль</a>
 						</div>
-						<form action="" class="personal-account_profile_form">
+						<form action="php/index.php" class="personal-account_profile_form" method="POST">
 							<p class="personal-account_profile_form-text">
 								E-mail <span>*</span>
 							</p>
-							<input type="email" class="personal-account_profile_form-input personal-account_profile_form-input--decor" required value="mingalyovuxcheck@gmail.com">
+							<input type="email" name="email" class="personal-account_profile_form-input personal-account_profile_form-input--decor" required value="mingalyovuxcheck@gmail.com">
 							<label for="" class="personal-account_profile_form-lable-number">
 								<div class="personal-account_profile_form-lable-number_phone">
 									<p class="personal-account_profile_form-text">
 										Номер телефона <span>*</span>
 									</p>
-									<input type="tel" class="personal-account_profile_form-input personal-account_profile_form-input--decor" required value="+7 910 832 26 28" pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}">
+									<input type="tel" name="phone" class="personal-account_profile_form-input personal-account_profile_form-input--decor" required value="+7 910 832 26 28" pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}">
 								</div>
 								<div class="personal-account_profile_form-lable-number_phone">
 									<p class="personal-account_profile_form-text">
 										Дополнительный номер
 									</p>
-									<input type="tel" class="personal-account_profile_form-input" pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}">
+									<input type="tel" name="second_phone" class="personal-account_profile_form-input" pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}">
 								</div>
 							</label>
 							<p class="personal-account_profile_form-text ">
 								Фамилия <span>*</span>
 							</p>
-							<input type="text" class="personal-account_profile_form-input personal-account_profile_form-input--decor" required value="Мингалёв">
+							<input type="text" name="LastName" class="personal-account_profile_form-input personal-account_profile_form-input--decor" required value="Мингалёв">
 							<p class="personal-account_profile_form-text">
 								Имя <span>*</span>
 							</p>
-							<input type="text" class="personal-account_profile_form-input personal-account_profile_form-input--decor" required value="Михаил">
+							<input type="text" name="FirstName" class="personal-account_profile_form-input personal-account_profile_form-input--decor" required value="Михаил">
 							<p class="personal-account_profile_form-text">
 								Отчество
 							</p>
-							<input type="text" class="personal-account_profile_form-input personal-account_profile_form-input--decor" required value="Михайлович">
+							<input type="text" name="MiddleName" class="personal-account_profile_form-input personal-account_profile_form-input--decor" required value="Михайлович">
 							<p class="personal-account_profile_form-text">
 								Дата рождения
 							</p>
