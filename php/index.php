@@ -4,21 +4,21 @@
  * 
  */
 
-	$userCalue = [
-		'firstName' => 'Михаил',
-		'lastName' => 'Мингалёв',
-		'middleName' => 'Михайлович',
-		'email' => 'mingalyovuxcheck@gmail.com',
-		'phone' => '+7 910 832 26 28',
-		'anotherPhone' => '',
+	$userValue = [
+		'firstName' => $_POST['firstName'],
+		'lastName' => $_POST["lastName"],
+		'middleName' => $_POST["middleName"],
+		'email' => $_POST["email"],
+		'phone' => $_POST["phone"],
+		'anotherPhone' => $_POST["anotherPhone"],
 	];
 
-	$FirstName = $_POST["firstName"];
-	$LastName = $_POST["lastName"];
-	$MiddleName = $_POST["middleName"];
-	$phone = $_POST["phone"];
-	$email = $_POST["email"];
-	$anotherPhone = $_POST["anotherPhone"];
+	// $FirstName = $_POST["firstName"];
+	// $LastName = $_POST["lastName"];
+	// $MiddleName = $_POST["middleName"];
+	// $phone = $_POST["phone"];
+	// $email = $_POST["email"];
+	// $anotherPhone = $_POST["anotherPhone"];
 
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 		$newFirstName = $_POST["firstName"];
@@ -28,21 +28,31 @@
 		$newEmail = $_POST["email"];
 		$newAnotherPhone = $_POST["anotherPhone"];
 
+		$errors = [];
 
-		$to  = "<mail@example.com>, " ; 
-	$to .= "mail2@example.com>"; 
+		if(strlen($newFirstName) < 3 || strlen($newFirstName) >25)
+		{
+			$errors[]= "Имя слишком короткое или имеет слишком много символов <br>";
+			
+		}
 
-	$subject = "Заголовок письма"; 
+		if(strlen($newLastName) < 6)
+		{
+			$errors[]= "Фамилия не может содержать меньше 6 символов";
+			
+		}
 
-	$message = ' <p>Текст письма</p> </br> <b>1-ая строчка </b> </br><i>2-ая строчка </i> </br>';
+		
 
-	$headers  = "Content-type: text/html; charset=windows-1251 \r\n"; 
-	$headers .= "From: От кого письмо <from@example.com>\r\n"; 
-	$headers .= "Reply-To: reply-to@example.com\r\n"; 
+		echo "<pre>"; print_r($userValue);
 
-	mail($to, $subject, $message, $headers); 
-	var_dump(mail());
+		if (!empty($errors)) {
+			foreach ($errors as $error) {
+				echo "<pre>"; print_r($error);
+			}
+		}
 	}
+
 
 
 
