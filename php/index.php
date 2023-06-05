@@ -5,12 +5,14 @@
  */
 
 	$userValue = [
-		'firstName' => $_POST['firstName'],
-		'lastName' => $_POST["lastName"],
-		'middleName' => $_POST["middleName"],
-		'email' => $_POST["email"],
-		'phone' => $_POST["phone"],
-		'anotherPhone' => $_POST["anotherPhone"],
+		'FirstName' => $_POST['firstName'],
+		'LastName' => $_POST["lastName"],
+		'MiddleName' => $_POST["middleName"],
+		'Email' => $_POST["email"],
+		'Phone' => $_POST["phone"],
+		'AnotherPhone' => $_POST["anotherPhone"],
+		'Born' => $_POST["day"] . " / " . $_POST["month"] . " / " . $_POST["year"],
+		'Sex' => $_POST['radio'],
 	];
 
 	// $FirstName = $_POST["firstName"];
@@ -35,6 +37,8 @@
 			$errors[]= "Имя слишком короткое или имеет слишком много символов <br>";
 			
 		}
+
+
 
 		if(strlen($newLastName) < 6)
 		{
