@@ -29,6 +29,7 @@
 		$newPhone = $_POST["phone"];
 		$newEmail = $_POST["email"];
 		$newAnotherPhone = $_POST["anotherPhone"];
+		$newBorn = $_POST["day"] . " / " . $_POST["month"] . " / " . $_POST["year"];
 
 		$errors = [];
 
@@ -45,16 +46,27 @@
 			$errors[]= "Фамилия не может содержать меньше 6 символов";
 			
 		}
-
-		
+$to = "user@example.com";
+		$subject = "Редактирование профиля";
+		$message = "Данные изменены";
 
 		echo "<pre>"; print_r($userValue);
 
 		if (!empty($errors)) {
 			foreach ($errors as $error) {
 				echo "<pre>"; print_r($error);
+				echo "<br >Письмо не может быть отправлено из-за вышеуказанных ошибок";
 			}
 		}
+		else{
+			mail($to, $subject, 
+			"Имя: " .$newFirstName ."\n".
+			"Фамилия: " .$newLastName ."\n",);
+			echo "Письмо отправлено успешно";
+		}
+
+		
+	
 	}
 
 
