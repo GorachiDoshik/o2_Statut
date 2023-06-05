@@ -30,6 +30,7 @@
 		$newEmail = $_POST["email"];
 		$newAnotherPhone = $_POST["anotherPhone"];
 		$newBorn = $_POST["day"] . " / " . $_POST["month"] . " / " . $_POST["year"];
+		$newSex = $_POST['radio'];
 
 		$errors = [];
 
@@ -38,15 +39,20 @@
 			$errors[]= "Имя слишком короткое или имеет слишком много символов <br>";
 			
 		}
-
-
+		
+		$year = $_POST["year"];
+		$dateYear = date("Y");
+		$IntervalAge = $dateYear - $year;
+		if ($IntervalAge < 16) {
+			$errors[] = "Ваши данные не могут быть изменены, так как ваш возраст не соответствует правилам";
+		}
 
 		if(strlen($newLastName) < 6)
 		{
 			$errors[]= "Фамилия не может содержать меньше 6 символов";
 			
 		}
-$to = "user@example.com";
+		$to = "user@example.com";
 		$subject = "Редактирование профиля";
 		$message = "Данные изменены";
 
@@ -54,18 +60,22 @@ $to = "user@example.com";
 
 		if (!empty($errors)) {
 			foreach ($errors as $error) {
-				echo "<pre>"; print_r($error);
-				echo "<br >Письмо не может быть отправлено из-за вышеуказанных ошибок";
+				echo "<pre>" ; print_r($error );
+
 			}
+			echo "<br><br>Письмо не может быть отправлено из-за вышеуказанных ошибок";
 		}
 		else{
 			mail($to, $subject, 
 			"Имя: " .$newFirstName ."\n".
-			"Фамилия: " .$newLastName ."\n",);
+			"Фамилия: " .$newLastName ."\n".
+			"Отчество: " .$newMiddleName ."\n".
+			"Почта: " .$newEmail ."\n".
+			"Телефон: " .$newPhone ."\n".
+			"Пол: " .$newSex ."\n",);
 			echo "Письмо отправлено успешно";
 		}
 
-		
 	
 	}
 
