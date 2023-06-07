@@ -58,6 +58,10 @@
 			$errors[]= '<span style="color: #f73939;">Введите корректно номер телефона</span><br>';
 		}
 
+		if ($newAnotherPhone == $newPhone) {
+			$errors[]= '<span style="color: #f73939;">Дополнительный номер идентичен основному номеру</span><br>';
+		}
+
 
 		$year = $_POST["year"]; //дата года рождения пользователя
 		$dateYear = date("Y"); //текущий год даты
@@ -65,7 +69,7 @@
 
 		if ($IntervalAge < 16)	//Проверка пользователя на возраст
 		{
-			$errors[] = "Ваши данные не могут быть изменены, так как ваш возраст не соответствует правилам";
+			$errors[] = '<span style="color: #f73939">Ваш возраст ниже 16 лет</span>';
 		}
 
 
@@ -91,6 +95,7 @@
 			"Отчество: " .$newMiddleName ."\n".
 			"Почта: " .$newEmail ."\n".
 			"Телефон: " .$newPhone ."\n".
+			"Доп.номер: " .$newAnotherPhone ."\n".
 			"Пол: " .$newSex ."\n",
 			$headers);
 			echo '<span style = "color: green">Письмо отправлено успешно</span>';

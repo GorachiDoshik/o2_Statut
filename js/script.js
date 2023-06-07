@@ -7,6 +7,8 @@ $(document).ready(function() {
 	  let name = $('#name').val();
 	  let lastName = $('#lastName').val();
 	  let email = $('#email').val();
+	  let phone = $('#phone').val();
+	  let anotherPhone = $('#anotherPhone').val();
 
 
 	  if (name === '' ) // Проверка на пустое поле в "Имя"
@@ -34,6 +36,15 @@ $(document).ready(function() {
 	  else
 	  {
 	  	$('#result__email').html('<span style="display: none;">Заполните ваш E-mail</span>');
+	  }
+
+	  if (anotherPhone == phone ) // Проверка на схожесть поле в "Номер телефона" и "Дополнительный номер"
+	  {
+		$('#result__anotherPhone').html('<span style="color: red; position: absolute;width: 100%;font-size: 14px;margin-left: 15px;margin-top: 15px;">Номер идентичен основному</span>');
+	  }
+	  else
+	  {
+	  	$('#result__anotherPhone').html('<span style="display: none;">Номер идентичен основному</span>');
 	  }
 
 	  // Выполняем AJAX-запрос
