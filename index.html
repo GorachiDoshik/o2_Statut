@@ -67,7 +67,7 @@
 							<p class="personal-account_profile_form-text">
 								Имя <span>*</span>
 							</p>
-							<input type="text" name="firstName" class="personal-account_profile_form-input personal-account_profile_form-input--decor" required value="Михаил">
+							<input type="text" name="firstName" id="name" class="personal-account_profile_form-input personal-account_profile_form-input--decor" value="Михаил"> <span id="result__name"></span>
 							<p class="personal-account_profile_form-text">
 								Отчество
 							</p>
@@ -178,11 +178,16 @@
 								</div>
 							</div>
 							<input type="submit" class="personal-account_profile_form-btn" value="Сохранить изменения">
+							<div id="result"></div>
 						</form>
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>

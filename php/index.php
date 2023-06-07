@@ -1,23 +1,18 @@
+<!DOCTYPE html>
 <?php
 
-mb_internal_encoding("UTF-8");
-	$userValue = [
-		'FirstName' => $_POST['firstName'],
-		'LastName' => $_POST["lastName"],
-		'MiddleName' => $_POST["middleName"],
-		'Email' => $_POST["email"],
-		'Phone' => $_POST["phone"],
-		'AnotherPhone' => $_POST["anotherPhone"],
-		'Born' => $_POST["day"] . " / " . $_POST["month"] . " / " . $_POST["year"],
-		'Sex' => $_POST['radio'],
-	];
 
-	// $FirstName = $_POST["firstName"];
-	// $LastName = $_POST["lastName"];
-	// $MiddleName = $_POST["middleName"];
-	// $phone = $_POST["phone"];
-	// $email = $_POST["email"];
-	// $anotherPhone = $_POST["anotherPhone"];
+	// $userValue = [
+	// 	'FirstName' => $_POST['firstName'],
+	// 	'LastName' => $_POST["lastName"],
+	// 	'MiddleName' => $_POST["middleName"],
+	// 	'Email' => $_POST["email"],
+	// 	'Phone' => $_POST["phone"],
+	// 	'AnotherPhone' => $_POST["anotherPhone"],
+	// 	'Born' => $_POST["day"] . " / " . $_POST["month"] . " / " . $_POST["year"],
+	// 	'Sex' => $_POST['radio'],
+	// ];
+
 
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 		$newFirstName = $_POST["firstName"];
@@ -77,7 +72,7 @@ mb_internal_encoding("UTF-8");
 		$subject = "Редактирование профиля";
 		$headers = "From: o2Statut@gmail.com";
 
-		echo "<pre>"; print_r($userValue);
+		// echo "<pre>"; print_r($userValue);
 
 		if (!empty($errors))
 		{	//Если обработчик не пустой, то выведет список ошибок
@@ -97,7 +92,7 @@ mb_internal_encoding("UTF-8");
 			"Телефон: " .$newPhone ."\n".
 			"Пол: " .$newSex ."\n",
 			$headers);
-			echo "Письмо отправлено успешно";
+			echo '<span style = "color: green">Письмо отправлено успешно</span>';
 		}
 
 	}
