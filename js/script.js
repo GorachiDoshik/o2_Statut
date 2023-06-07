@@ -4,13 +4,36 @@ $(document).ready(function() {
 	  e.preventDefault();
 
 	  // Получение данных из формы
-	  var name = $('#name').val();
-	  var email = $('#email').val();
+	  let name = $('#name').val();
+	  let lastName = $('#lastName').val();
+	  let email = $('#email').val();
 
 
-	  if (name === '' ) {
-		$('#result__name').html('<span style="color: red; position: absolute;width: 100%;font-size: 14px;margin-left: 15px;margin-top: 15px;">Пожалуйста, заполните ваше имя</span>');
-		return;
+	  if (name === '' ) // Проверка на пустое поле в "Имя"
+	  {
+		$('#result__name').html('<span style="color: red; position: absolute;width: 100%;font-size: 14px;margin-left: 15px;margin-top: 15px;">Заполните ваше имя</span>');
+	  }
+	  else
+	  {
+	  	$('#result__name').html('<span style="display: none;">Заполните ваше имя</span>');
+	  }
+
+	  if (lastName === '' ) // Проверка на пустое поле в "Фамилия"
+	  {
+		$('#result__lastName').html('<span style="color: red; position: absolute;width: 100%;font-size: 14px;margin-left: 15px;margin-top: 15px;">Заполните вашу фамилию</span>');
+	  }
+	  else
+	  {
+	  	$('#result__lastName').html('<span style="display: none;">Заполните вашу фамилию</span>');
+	  }
+
+	  if (email === '' ) // Проверка на пустое поле в "email"
+	  {
+		$('#result__email').html('<span style="color: red; position: absolute;width: 100%;font-size: 14px;margin-left: 15px;margin-top: 15px;">Заполните ваш E-mail</span>');
+	  }
+	  else
+	  {
+	  	$('#result__email').html('<span style="display: none;">Заполните ваш E-mail</span>');
 	  }
 
 	  // Выполняем AJAX-запрос
@@ -20,10 +43,10 @@ $(document).ready(function() {
 		data: $(this).serialize(),
 		dataType: 'html',
 		success: function(response) {
-		  $('#result').html(response); // Вывод полученного HTML-кода в контейнер с идентификатором 'result'
+		  $('#result').html(response);
 		},
-		error: function(xhr, status, error) {
-		  console.log(error); // Вывод сообщения об ошибке в консоль
+		error: function(error){
+			$('#result').html(error);
 		}
 	  });
 	});
