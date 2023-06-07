@@ -2,6 +2,7 @@ $(document).ready(function() {
 
 	$('.personal-account_profile_form').submit(function(e) {
 	  e.preventDefault();
+	   $('#result').addClass('active');
 
 	  // Получение данных из формы
 	  let name = $('#name').val();
@@ -62,4 +63,3 @@ $(document).ready(function() {
 	  });
 	});
   });
-  

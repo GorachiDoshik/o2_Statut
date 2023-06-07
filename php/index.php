@@ -50,8 +50,9 @@
 
 		if(!filter_var($newEmail, FILTER_VALIDATE_EMAIL)) // Проверка корректности почты
 		{
-			$errors[]= '<span style="color: #f73939;">Введите вашу почту правильно</span><br>';
+			$errors[]= '<span style="color: #f73939;">Ваша почта не корректна или пустое</span><br>';
 		}
+
 
 		if(!preg_match("/^\+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}$/", $newPhone, $anotherPhone)) // Проверка корректности номера
 		{

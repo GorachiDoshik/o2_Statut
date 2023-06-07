@@ -281,6 +281,16 @@ p{
 }
 
 #result{
-	margin-top: 30px;
+display: none;
+}
+
+#result.active{
+		display: block;
+		margin-top: 30px;
+	background-color: #f4f4f4;
+	border-radius: 15px;
+	padding: 30px;
+	width: 100%;
+
 }
 
